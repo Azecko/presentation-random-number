@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Nombre aléatoires</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -20,6 +20,148 @@
 					<h3>Les nombres aléatoires</h3>
 					<p style="font-style: italic; font-size: 20px;">(dans l'informatique)</p>
 				</section>
+				<section>
+					<h3>Quésaco ?</h3>
+					<p style="font-size: 30px;">Les nombres aléatoires sont des nombres générés de façon à ce qu'il n'existe aucun lien entre un nombre et ses prédécesseurs.</p>
+				</section>
+				<section>
+					<h3>À quoi ça sert ?</h3>
+					<p style="font-size: 30px;">Les nombres aléatoires sont très utilisés dans différents domaines :</p>
+					<ul style="font-size: 25px;">
+						<li>Les jeux vidéos</li>
+						<li>La sécurité (cryptographie)</li>
+						<li>L'informatique en général</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h3>Mais, ça existe déjà..</h3>
+						<p style="font-size: 20px;">Les différents languages de programmation nous fournissent déjà des méthodes pour générer des nombres "aléatoires". Voici quelques examples dans différents langages pour générer un nombre "aléatoire".</p>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### JavaScript
+							```js
+							Math.random()
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Python
+							```python
+							from random import randrange
+							randrange(2)
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Java
+							```java
+							float Random = Math.random();
+							```
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Les nombres pseudo aléatoires</h3>
+						<p style="font-size: 20px;">Un générateur de nombres pseudo aléatoires : "Est un algorithme qui génère une séquence de nombres présentant certaines propriétés du hasard. Les nombres sont supposés être suffisamment indépendants les uns des autres, et il est normalement difficile de repérer des groupes de nombres qui suivent une certaine règle." - Wikipedia
+						<br><br>
+						<span style="font-style: italic;">(Les examples précédents génèrent des nombres pseudo aléatoires).</span></p>
+					</section>
+					<section>
+						<a href="https://youtu.be/aSlkVy3mbR0?t=178" target="_blank">https://youtu.be/aSlkVy3mbR0?t=178</a>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Le problème</h3>
+						<p style="font-size: 30px;">Le problème avec la génération de nombres aléatoires, c'est de vraiment définir ce qu'est <strong style="text-decoration: underline;">l'aléatoire</strong>.</p>
+					</section>
+					<section>
+						<p style="font-size: 30px; font-style: italic;">« Les événements amenés par la combinaison ou la rencontre de phénomènes qui appartiennent à des séries indépendantes, dans l'ordre de la causalité, sont ce qu'on nomme des événements fortuits ou des résultats du hasard. »</p>
+						<p style="font-size: 20px;"> - Augustin Cournot</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Les vrais nombres aléatoires</h3>
+						<p style="font-size: 30px;">Les générateurs de vrais nombres aléatoires ne se basent pas sur une formule particulière, mais sur des évènements que l'on ne peut pas prédire à l'avance, comme le  "<a href="https://en.wikipedia.org/wiki/Atmospheric_noise" target="_blank">bruit atmosphérique</a>" ou encore le "<a href="https://en.wikipedia.org/wiki/Johnson%E2%80%93Nyquist_noise" target="_blank">bruit thermique</a>".</p>
+					</section>
+				</section>
+				<section>
+					<h3 style="font-size: 30px;">Pourquoi les languages de prog. ne génèrent pas de vrais nombres aléatoires ?</h3>
+					<p style="font-size: 20px;">Si les languages de programmation génèraient de vrais nombres aléatoires, ce serait bien trop coûteux en terme de performance et la plupart des utilisateurs n'en auraient même pas l'utilité.</p>
+				</section>
+				<section>
+					<section>
+						<h3>Avantages & Désavantages</h3>
+					</section>
+					<section>
+						<h3>Avantages nombre pseudo aléatoire</h3>
+						<ul style="font-size: 30px;">
+							<li>Rapide</li>
+							<li>Généralement suffisant</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Désavantages nombre pseudo aléatoire</h3>
+						<ul style="font-size: 30px;">
+							<li>Pas réellement aléatoire donc prévisible</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Avantages vrai nombre aléatoire</h3>
+						<ul style="font-size: 30px;">
+							<li>Très sécurisé</li>
+							<li>Imprévisible</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Désavantages vrai nombre aléatoire</h3>
+						<ul style="font-size: 30px;">
+							<li>Plus lent</li>
+							<li>Généralement "too much" <br>pour la tâche voulue</li>
+							<li>Plus dur à créer / implémanter</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h3>En bref..</h3>
+					<p style="font-size: 25px;"><strong>Un nombre pseudo aléatoire</strong> est un nombre généré par une formule "logique et prévisible".</p>
+					<p style="font-size: 25px;"><strong>Un vrai nombre aléatoire</strong> est un nombre généré par un évènement qui ne peut pas être prévu à l'avance.</p>
+				</section>
+				<section>
+					<h3 style="font-size: 42px;">Vrai générateur de nombres aléatoires</h3>
+					<ul style="font-size: 30px;">
+						<li><a href="https://random.org" target="_blank">Random.org</a> (utilise le "<a href="https://en.wikipedia.org/wiki/Atmospheric_noise" target="_blank">bruit atmosphérique</a>")</li>
+					</ul>
+				</section>
+				<section>
+				<section>
+					<section>
+						<h3>Apprendre & exercer</h3>
+						<p style="font-size: 30px;">Voici quelques petites idées de programmes pour jouer avec les nombres pseudo aléatoires.</p>
+					</section>
+					<section>
+						<h3>Exercice 1</h3>
+						<p style="font-size: 30px;">Créer un site internet qui permet de jouer au "jeu de la fourchette" <span style="font-style: italic;">(l'utilisateur doit deviner un nombre aléatoire généré par l'ordinateur).</span></p>
+					</section>
+					<section>
+						<h3>Exercice 2</h3>
+						<p style="font-size: 30px;">Générer une certaine quantité de nombres pseudo aléatoires, et dire combien de fois chaque nombres a été généré.</p>
+					</section>
+					<section>
+						<h3>Exercice 3 (avancé)</h3>
+						<p style="font-size: 30px;">Générer un vrai nombre aléatoire.</p>
+					</section>
+				</section>
+				<section>
+					<img style="width: 600px;" src="https://camo.githubusercontent.com/5327c3e6d8349607bc84c60102bee78e7ee32d2b1861f28445560df9eeb79492/68747470733a2f2f68616b696d2d7374617469632e73332e616d617a6f6e6177732e636f6d2f72657665616c2d6a732f6c6f676f2f76312f72657665616c2d626c61636b2d746578742d737469636b65722e706e67" alt="RevealJS logo">
+					<p style="font-size: 20px;">Cette présentation a été entièrement réalisée grâce à <a href="https://revealjs.com/" target="_blank">RevealJS</a>, un framework HTML qui permet de créer des présentations facilement.</p>
+				</section>
 			</div>
 		</div>
 
@@ -33,6 +175,7 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				slideNumber: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
